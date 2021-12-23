@@ -16,18 +16,39 @@
 
 // Number in dart
 void main(List<String> args) {
-  // =============SWITCH CASES----------------
-  String day = 'monday';
-
-  switch (day) {
-    case 'monday':
-      print('MONDAY');
-      break;
-    case 'tuesday':
-      print('TUESDAY');
-      break;
+  // ==========LOOP=============
+  // print 2 table
+  int table = 2;
+  int i = 1;
+  while (i <= 10) {
+    print("$table x $i=${table * i}");
+    i++;
   }
-  print('done');
+  // List names = ['ali', 'raza', 'zaid'];
+  // int i = 0;
+  // while (i < names.length) {
+  //   print(names[i]);
+  //   i++;
+  // }
+  // int num = 1;
+  // while (num < 10) {
+  //   print(num);
+  //   num++;
+  // }
+  // print('congratulation');
+
+  // =============SWITCH CASES----------------
+  // String day = 'monday';
+
+  // switch (day) {
+  //   case 'monday':
+  //     print('MONDAY');
+  //     break;
+  //   case 'tuesday':
+  //     print('TUESDAY');
+  //     break;
+  // }
+  // print('done');
 
   // -------------if/else if/if else---------
   // int myAge = 10;
