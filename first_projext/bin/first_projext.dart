@@ -16,6 +16,16 @@
 
 // Number in dart
 void main(List<String> args) {
+  // ==============OPERANDS==================
+  int myvalue = 10;
+  bool isAdult = 10 != 2 ? true : false;
+  print(isAdult);
+  // int value1 = 10;
+  // String value2 = 'aliraza';
+  // print(value1 is! int);
+  // print(value2 is! String);
+  // int valuethre = 10;
+  // print(valuethre == 10 ? 'ali' : "zaidi");
   // int list1 = 2;
   // int list2 = 3;
   // print(list1 + list2);
@@ -33,12 +43,12 @@ void main(List<String> args) {
   // int a = 3;
   // print(--a);
   // print(a);
-  String ab = 'aliraza';
-  String item = ab.toUpperCase();
-  print(item);
-  int abc = 24;
-  double itemDouble = abc.toDouble();
-  print(itemDouble);
-  String valu = itemDouble.toString();
-  print(valu);
+  // String ab = 'aliraza';
+  // String item = ab.toUpperCase();
+  // print(item);
+  // int abc = 24;
+  // double itemDouble = abc.toDouble();
+  // print(itemDouble);
+  // String valu = itemDouble.toString();
+  // print(valu);
 }
