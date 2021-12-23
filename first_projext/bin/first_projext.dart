@@ -16,6 +16,19 @@
 
 // Number in dart
 void main(List<String> args) {
+  // =============SWITCH CASES----------------
+  String day = 'monday';
+
+  switch (day) {
+    case 'monday':
+      print('MONDAY');
+      break;
+    case 'tuesday':
+      print('TUESDAY');
+      break;
+  }
+  print('done');
+
   // -------------if/else if/if else---------
   // int myAge = 10;
   // int yourAge = 20;
@@ -26,16 +39,16 @@ void main(List<String> args) {
   //   message = 'your are not raza';
   // }
   // print(message);
-  double marks = 0.70;
-  String grade;
-  if (marks >= 0.9) {
-    grade = 'GRADE A';
-  } else if (marks >= 0.6) {
-    grade = 'GRADE B';
-  } else {
-    grade = 'GRADE C';
-  }
-  print(grade);
+  // double marks = 0.70;
+  // String grade;
+  // if (marks >= 0.9) {
+  //   grade = 'GRADE A';
+  // } else if (marks >= 0.6) {
+  //   grade = 'GRADE B';
+  // } else {
+  //   grade = 'GRADE C';
+  // }
+  // print(grade);
 
   // ==============OPERANDS==================
   // int myvalue = 10;
