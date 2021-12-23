@@ -39,6 +39,6 @@ void main(List<String> args) {
   int abc = 24;
   double itemDouble = abc.toDouble();
   print(itemDouble);
-  itemDouble.toString();
-  print(itemDouble);
+  String valu = itemDouble.toString();
+  print(valu);
 }
