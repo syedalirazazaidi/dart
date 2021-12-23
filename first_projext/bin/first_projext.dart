@@ -16,10 +16,31 @@
 
 // Number in dart
 void main(List<String> args) {
+  // -------------if/else if/if else---------
+  // int myAge = 10;
+  // int yourAge = 20;
+  // String message;
+  // if (myAge != yourAge) {
+  //   message = "hi i m raza";
+  // } else {
+  //   message = 'your are not raza';
+  // }
+  // print(message);
+  double marks = 0.70;
+  String grade;
+  if (marks >= 0.9) {
+    grade = 'GRADE A';
+  } else if (marks >= 0.6) {
+    grade = 'GRADE B';
+  } else {
+    grade = 'GRADE C';
+  }
+  print(grade);
+
   // ==============OPERANDS==================
-  int myvalue = 10;
-  bool isAdult = 10 != 2 ? true : false;
-  print(isAdult);
+  // int myvalue = 10;
+  // bool isAdult = 10 != 2 ? true : false;
+  // print(isAdult);
   // int value1 = 10;
   // String value2 = 'aliraza';
   // print(value1 is! int);
