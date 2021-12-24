@@ -15,7 +15,30 @@
 // }
 
 // Number in dart
+enum Fruits { mango, apple, banana, grapes }
 void main(List<String> args) {
+  // ============ENUM============
+  Fruits myfruit = Fruits.mango;
+  print('$myfruit, ;;;');
+  String message = '';
+  switch (myfruit) {
+    case Fruits.apple:
+      message = 'happy eat';
+      print(message);
+      break;
+  }
+  print('just eat');
+
+  // Fruits fruit = Fruits.mango;
+  // if (fruit == Fruits.apple) {
+  //   print('hi');
+  // }
+  // print('fruitfull');
+
+  // for (Fruits name in Fruits.values) {
+  //   print(name);
+  // }
+
   // ==========LOOP=============
 
   // print 2 table
@@ -26,19 +49,19 @@ void main(List<String> args) {
   //   i++;
   // }
   // =====FOR LOOP===========
-  List numberloop = [1, 2, 3, 4, 5, -10, 4, 5, 6, 9];
-  int i;
-  for (i = 0; i < numberloop.length; i++) {
-    if (numberloop[i] < 0) {
-      print('Number ${numberloop[i]} is -ive');
-      break;
-    } else if (numberloop[i].isEven) {
-      print('Number ${numberloop[i]} is even');
-    } else if (numberloop[i].isOdd) {
-      print('Number ${numberloop[i]} is odd');
-    }
-  }
-  print('iteration complete');
+  // List numberloop = [1, 2, 3, 4, 5, -10, 4, 5, 6, 9];
+  // int i;
+  // for (i = 0; i < numberloop.length; i++) {
+  //   if (numberloop[i] < 0) {
+  //     print('Number ${numberloop[i]} is -ive');
+  //     break;
+  //   } else if (numberloop[i].isEven) {
+  //     print('Number ${numberloop[i]} is even');
+  //   } else if (numberloop[i].isOdd) {
+  //     print('Number ${numberloop[i]} is odd');
+  //   }
+  // }
+  // print('iteration complete');
   // int table = 4;
 
   // for (int i = 0; i <= 10; i += 2) {
