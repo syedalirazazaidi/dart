@@ -17,13 +17,41 @@
 // Number in dart
 void main(List<String> args) {
   // ==========LOOP=============
+
   // print 2 table
-  int table = 2;
-  int i = 1;
-  while (i <= 10) {
-    print("$table x $i=${table * i}");
-    i++;
+  // int table = 5;
+  // int i = 1;
+  // while (i <= 10) {
+  //   print("$table x $i=${table * i}");
+  //   i++;
+  // }
+  // =====FOR LOOP===========
+  List numberloop = [1, 2, 3, 4, 5, -10, 4, 5, 6, 9];
+  int i;
+  for (i = 0; i < numberloop.length; i++) {
+    if (numberloop[i] < 0) {
+      print('Number ${numberloop[i]} is -ive');
+      break;
+    } else if (numberloop[i].isEven) {
+      print('Number ${numberloop[i]} is even');
+    } else if (numberloop[i].isOdd) {
+      print('Number ${numberloop[i]} is odd');
+    }
   }
+  print('iteration complete');
+  // int table = 4;
+
+  // for (int i = 0; i <= 10; i += 2) {
+  //   print("$table x $i=${table * i}");
+  // }
+  // var num = 5;
+  // var factorial = 1;
+
+  // for (var i = num; i >= 1; i--) {
+  //   factorial *= i;
+  // }
+  // print(factorial);
+
   // List names = ['ali', 'raza', 'zaid'];
   // int i = 0;
   // while (i < names.length) {
