@@ -23,11 +23,18 @@
 
 void main(List<String> args) {
   List<int> valArray = [5, 10, 15, 20, 25];
-  int numb = 0;
-  for (numb in valArray) {
-    numb += numb;
-  }
-  print(numb);
+  int myWhere = valArray.firstWhere(
+    (element) => element > 30,
+    orElse: () => -1,
+  );
+
+  print(myWhere);
+
+  // int numb = 0;
+  // for (numb in valArray) {
+  //   numb += numb;
+  // }
+  // print(numb);
   // for (int i = 0; i <= 5; ++i) {
   //   print(i);
   // }
