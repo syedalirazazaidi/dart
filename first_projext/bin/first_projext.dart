@@ -22,6 +22,19 @@
 // import 'dart:io';
 
 void main(List<String> args) {
+  ////////SPREAD OPERATOR///////
+  List<String> List1 = [
+    'aa',
+    'bb',
+    'cc',
+  ];
+
+  List<String> List2 = ['dd', 'ee', for (String Elem in List1) Elem];
+  print(List2);
+  // for (var item in List1) {
+  //   List2.add(item);
+  // }
+  // print(List2);
   ////////MAP/////////
   // var details = {'Usrname': 'tom', 'Password': 'pass@123'};
   // details.forEach((key, value) => print(value));
@@ -32,21 +45,21 @@ void main(List<String> args) {
   // };
   // myObj['number'] = 20;
   // print(myObj.entries.toList());
-  Map<String, Map<String, int>> studentIds = {
-    "science": {"aamir": 40, "fazal": 70, "ali": 30},
-    "math": {"aamir": 60, "fazal": 39, "ali": 30},
-    "english": {"aamir": 50, "fazal": 70, "ali": 60},
-  };
-  Set<String> names = {};
+  // Map<String, Map<String, int>> studentIds = {
+  //   "science": {"aamir": 40, "fazal": 70, "ali": 30},
+  //   "math": {"aamir": 60, "fazal": 39, "ali": 30},
+  //   "english": {"aamir": 50, "fazal": 70, "ali": 60},
+  // };
+  // Set<String> names = {};
 
-  studentIds.forEach((subject, scores) {
-    scores.forEach((key, value) {
-      if (value < 40) {
-        names.add(key);
-      }
-    });
-  });
-  print(names.toList());
+  // studentIds.forEach((subject, scores) {
+  //   scores.forEach((key, value) {
+  //     if (value < 40) {
+  //       names.add(key);
+  //     }
+  //   });
+  // });
+  // print(names.toList());
   // for (Person p in people.values) if (p.age > age) result++;
   // return result;
   // Map allClasses = {
