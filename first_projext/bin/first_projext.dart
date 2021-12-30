@@ -22,13 +22,50 @@
 // import 'dart:io';
 
 void main(List<String> args) {
-  List<int> valArray = [5, 10, 15, 20, 25];
-  int myWhere = valArray.firstWhere(
-    (element) => element > 30,
-    orElse: () => -1,
-  );
+  ////////MAP/////////
+  // var details = {'Usrname': 'tom', 'Password': 'pass@123'};
+  // details.forEach((key, value) => print(value));
+  // final Map<String, dynamic> myObj = {
+  //   'lastName': 'ali',
+  //   'last': 'raza',
+  //   'number': 10
+  // };
+  // myObj['number'] = 20;
+  // print(myObj.entries.toList());
+  Map allClasses = {
+    'SchoolName': 'City School',
+    "morningShift": ['math', 'english', 'science'],
+    'afternoonShift': ['science', 'art'],
+    'fees': 1000
+  };
+  print(allClasses['SchoolName']);
+  print(allClasses['fees']);
+  print(allClasses['morningShift'][1]);
+  print(allClasses['afternoonShift'][0]);
 
-  print(myWhere);
+  //////SETS///////
+  // Set setValues = {5, 10, 15, 20, 25, 30};
+  // var elem;
+  // for (elem in setValues) {
+  //   elem += elem;
+  // }
+
+  // print(elem);
+  // var valArray = [5, 10, 15, 20, 25, "aamir"];
+
+  // List myArray = [5, 10, 15, 20, 25, "aamir"];
+  // print(valArray);
+
+  // List<int> valArray = [5, 10, 15, 20, 25];
+  // int val = valArray.indexOf(10);
+  // valArray[val] = 60;
+  // print(valArray);
+  // int myWhere = valArray.firstWhere(
+  //   (element) => element > 30,
+  //   orElse: () => -1,
+  // );
+
+  // print(myWhere);
 
   // int numb = 0;
   // for (numb in valArray) {
