@@ -18,30 +18,43 @@
 // enum Fruits { mango, apple, banana, grapes }
 // import 'dart:io';
 
-import 'dart:math';
-import 'dart:io';
+// import 'dart:math';
+// import 'dart:io';
 
 void main(List<String> args) {
-  int score = 0;
-  while (true) {
-    stdout.write('enter your guess from 1 to 5 =');
-    final userInput = stdin.readLineSync();
-    Random random = new Random();
-    int randomNumber = random.nextInt(5) + 1;
-    if (userInput == null || userInput.isEmpty) {
-      print('enter your guess from 1 to 5 =');
-      continue;
-    } else if (userInput.toLowerCase() == 'exit') {
-      print('thank for your playing your score  $score');
-      break;
-    } else if (userInput == randomNumber.toString()) {
-      score++;
-      print('Your Win your score is now $score');
-    } else {
-      print(
-          'Try again , your Input was $userInput and system was $randomNumber');
-    }
+  List<int> valArray = [5, 10, 15, 20, 25];
+  int numb = 0;
+  for (numb in valArray) {
+    numb += numb;
   }
+  print(numb);
+  // for (int i = 0; i <= 5; ++i) {
+  //   print(i);
+  // }
+  // var List = ['a', 'b', 'cc'];
+  // print(List[1]);
+  // List.add('ali');
+  // print(List);
+  // int score = 0;
+  // while (true) {
+  //   stdout.write('enter your guess from 1 to 5 =');
+  //   final userInput = stdin.readLineSync();
+  //   Random random = new Random();
+  //   int randomNumber = random.nextInt(5) + 1;
+  //   if (userInput == null || userInput.isEmpty) {
+  //     print('enter your guess from 1 to 5 =');
+  //     continue;
+  //   } else if (userInput.toLowerCase() == 'exit') {
+  //     print('thank for your playing your score  $score');
+  //     break;
+  //   } else if (userInput == randomNumber.toString()) {
+  //     score++;
+  //     print('Your Win your score is now $score');
+  //   } else {
+  //     print(
+  //         'Try again , your Input was $userInput and system was $randomNumber');
+  //   }
+  // }
   // print("Hello, $myNumb! \nWelcome to GeeksforGeeks!!");
   // print(randomNumber);
   // Reading name of the Geek
