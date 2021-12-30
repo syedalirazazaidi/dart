@@ -15,19 +15,90 @@
 // }
 
 // Number in dart
-enum Fruits { mango, apple, banana, grapes }
+// enum Fruits { mango, apple, banana, grapes }
+// import 'dart:io';
+
+import 'dart:math';
+import 'dart:io';
+
 void main(List<String> args) {
-  // ============ENUM============
-  Fruits myfruit = Fruits.mango;
-  print('$myfruit, ;;;');
-  String message = '';
-  switch (myfruit) {
-    case Fruits.apple:
-      message = 'happy eat';
-      print(message);
+  int score = 0;
+  while (true) {
+    stdout.write('enter your guess from 1 to 5 =');
+    final userInput = stdin.readLineSync();
+    Random random = new Random();
+    int randomNumber = random.nextInt(5) + 1;
+    if (userInput == null || userInput.isEmpty) {
+      print('enter your guess from 1 to 5 =');
+      continue;
+    } else if (userInput.toLowerCase() == 'exit') {
+      print('thank for your playing your score  $score');
       break;
+    } else if (userInput == randomNumber.toString()) {
+      score++;
+      print('Your Win your score is now $score');
+    } else {
+      print(
+          'Try again , your Input was $userInput and system was $randomNumber');
+    }
   }
-  print('just eat');
+  // print("Hello, $myNumb! \nWelcome to GeeksforGeeks!!");
+  // print(randomNumber);
+  // Reading name of the Geek
+  // stdout.write('please enter your guess 1 to 5');
+  // String? yourGuess = stdin.readLineSync();
+  // int randomNo = Random().nextInt(5) + 1;
+  // if (yourGuess == null) {
+  //   print('please enter your guess 1 to 5');
+  // }
+
+  // Printing the name
+
+  // stdout.write("What's your name? ");
+  // String name = stdin.readLineSync();
+
+  // print("Hi, $name! What is your age?");
+  // int age = int.parse(stdin.readLineSync());
+
+  // int yearsToHunderd = 100 - age;
+  // print("$name, You have $yearsToHunderd years to be 100");
+  // int randomNo = Random().nextInt(5) + 1;
+  // print(randomNo);
+  // stdout.write("Enter your guess: ");
+
+  // while (true) {
+  //   stdout.write("Enter your guess: ");
+  // }
+  // int score = 0;
+  // while (true) {
+  //   stdout.write("Enter your guess: ");
+  //   final userInput = stdin.readLineSync();
+  //   int randomNo = Random().nextInt(5) + 1;
+  //   print('$userInput,sds');
+
+  // if (userInput == null) {
+  //   print('Please enter some input.');
+  //   break;
+  // } else if (userInput.toLowerCase() == 'exit') {
+  //   break;
+  // } else if (userInput == randomNo.toString()) {
+  //   score++;
+  //   print('You win!, your score now is $score');
+  // } else {
+  //   print('Try again. your input: $userInput, system no. $randomNo');
+  // }
+
+  // ============ENUM============
+  // Fruits myfruit = Fruits.mango;
+  // print('$myfruit, ;;;');
+  // String message = '';
+  // switch (myfruit) {
+  //   case Fruits.apple:
+  //     message = 'happy eat';
+  //     print(message);
+  //     break;
+  // }
+  // print('just eat');
 
   // Fruits fruit = Fruits.mango;
   // if (fruit == Fruits.apple) {
