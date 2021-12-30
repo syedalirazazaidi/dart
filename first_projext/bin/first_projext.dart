@@ -32,16 +32,33 @@ void main(List<String> args) {
   // };
   // myObj['number'] = 20;
   // print(myObj.entries.toList());
-  Map allClasses = {
-    'SchoolName': 'City School',
-    "morningShift": ['math', 'english', 'science'],
-    'afternoonShift': ['science', 'art'],
-    'fees': 1000
+  Map<String, Map<String, int>> studentIds = {
+    "science": {"aamir": 40, "fazal": 70, "ali": 30},
+    "math": {"aamir": 60, "fazal": 39, "ali": 30},
+    "english": {"aamir": 50, "fazal": 70, "ali": 60},
   };
-  print(allClasses['SchoolName']);
-  print(allClasses['fees']);
-  print(allClasses['morningShift'][1]);
-  print(allClasses['afternoonShift'][0]);
+  Set<String> names = {};
+
+  studentIds.forEach((subject, scores) {
+    scores.forEach((key, value) {
+      if (value < 40) {
+        names.add(key);
+      }
+    });
+  });
+  print(names);
+  // for (Person p in people.values) if (p.age > age) result++;
+  // return result;
+  // Map allClasses = {
+  //   'SchoolName': 'City School',
+  //   "morningShift": ['math', 'english', 'science'],
+  //   'afternoonShift': ['science', 'art'],
+  //   'fees': 1000
+  // };
+  // print(allClasses['SchoolName']);
+  // print(allClasses['fees']);
+  // print(allClasses['morningShift'][1]);
+  // print(allClasses['afternoonShift'][0]);
 
   //////SETS///////
   // Set setValues = {5, 10, 15, 20, 25, 30};
