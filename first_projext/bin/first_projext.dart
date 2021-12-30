@@ -22,16 +22,34 @@
 // import 'dart:io';
 
 void main(List<String> args) {
-  ////////SPREAD OPERATOR///////
-  List<String> List1 = [
-    'aa',
-    'bb',
-    'cc',
-  ];
+  //////By Ref By value////
+  List per1 = ['aamir'];
+  List per2 = per1;
+  List per3;
+  per2 = ['ali'];
+  per3 = per1;
+  per3[0] = 'ka';
+  print(per1);
+  print(per3);
 
-  List<String> List2 = ['dd', 'ee', for (String Elem in List1) Elem];
-  print(List2);
-  // for (var item in List1) {
+  ////////SPREAD OPERATOR///////
+  // List<String> List1 = [
+  //   'aa',
+  //   'bb',
+  //   'cc',
+  // ];
+
+  // List<String> List2 = ['dd', 'ee', for (String Elem in List1) Elem];
+  // print(List2);
+  // List<String> List3 = [
+  //   'ff',
+  //   'xx',
+  //   'yy',
+  //   'zz',
+  // ];
+  // List<String> List4 = ['tt', 'oo', ...List3, ...List1, ...List2];
+  // print(List4);
+  // // for (var item in List1) {
   //   List2.add(item);
   // }
   // print(List2);
