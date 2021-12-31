@@ -34,7 +34,25 @@ void main(List<String> args) {
   // }
 
   List<String> fileContent = File(args.first).readAsLinesSync();
-  print(fileContent);
+
+  fileContent.removeAt(0);
+  double sum = 0.0;
+  double aver = 0.0;
+
+  for (var item in fileContent) {
+    List items = item.split(',');
+    items.removeAt(0);
+    // print(items[2]);
+
+    // print(items);
+    // sum += items[2];
+    sum += double.parse(items[0]);
+    aver += double.parse(items[1]);
+    aver = aver / 2;
+  }
+  print('Total Sports activities for 30 days was ${sum.toStringAsFixed(2)}');
+  print(
+      'Average daily  Sports activities for 30 days was ${aver.toStringAsFixed(2)}');
 
   //////By Ref By value////
   // List per1 = ['aamir'];
