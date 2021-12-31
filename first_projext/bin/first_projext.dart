@@ -19,18 +19,32 @@
 // import 'dart:io';
 
 // import 'dart:math';
-// import 'dart:io';
+import 'dart:io';
 
 void main(List<String> args) {
+  ///Argument////
+  if (args.isEmpty) {
+    print(
+        ' Invalid Syntex :dart run <Project Name>[List of arguments] : $args');
+    exit(1);
+  }
+  //  else if (args.isNotEmpty) {
+  //   print('  : $args');
+  //   exit(0);
+  // }
+
+  List<String> fileContent = File(args.first).readAsLinesSync();
+  print(fileContent);
+
   //////By Ref By value////
-  List per1 = ['aamir'];
-  List per2 = per1;
-  List per3;
-  per2 = ['ali'];
-  per3 = per1;
-  per3[0] = 'ka';
-  print(per1);
-  print(per3);
+  // List per1 = ['aamir'];
+  // List per2 = per1;
+  // List per3;
+  // per2 = ['ali'];
+  // per3 = per1;
+  // per3[0] = 'ka';
+  // print(per1);
+  // print(per3);
 
   ////////SPREAD OPERATOR///////
   // List<String> List1 = [
