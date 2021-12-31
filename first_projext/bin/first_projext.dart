@@ -27,32 +27,70 @@ void main(List<String> args) {
     print(
         ' Invalid Syntex :dart run <Project Name>[List of arguments] : $args');
     exit(1);
+  } else if (!args.first.endsWith('.csv')) {
+    print('invalid File: File must be CSV format');
+    exit(1);
   }
+
+  String nameFile = args.first;
+  List<String> fileContent = File(nameFile).readAsLinesSync();
+  fileContent.removeAt(0);
+  double sportDurationTotal = 0;
+  int sportDays = 0;
+  int kcalIntakeTotal = 0;
+  int kcalDays = 0;
+  double sleepHoursTotal = 0;
+  int sleepDays = 0;
+  for (String line in fileContent) {
+    List<dynamic> lineValues = line.split(',');
+    double todaysSportHours = double.parse(lineValues[1]);
+    if (todaysSportHours != 0) {
+      sportDurationTotal += todaysSportHours;
+      sportDays++;
+    }
+    int todaysKcalIntake = int.parse(lineValues[2]);
+    if (todaysKcalIntake != 0) {
+      kcalIntakeTotal += todaysKcalIntake;
+      kcalDays++;
+    }
+
+    double todaysSleepHours = double.parse(lineValues[3]);
+    if (todaysSleepHours != 0) {
+      sleepHoursTotal += todaysSleepHours;
+      sleepDays++;
+    }
+  }
+  print(
+      "Total sports activity for $sportDays days was ${sportDurationTotal.toStringAsFixed(2)}h");
+
+  print(
+      "Average daily KCal intake for $kcalDays days was ${(kcalIntakeTotal / kcalDays).toStringAsFixed(2)} KCals");
+
+  print(
+      "Average daily Sleep hours for $sleepDays days was ${(sleepHoursTotal / sleepDays).toStringAsFixed(2)}h");
+
   //  else if (args.isNotEmpty) {
   //   print('  : $args');
   //   exit(0);
   // }
 
-  List<String> fileContent = File(args.first).readAsLinesSync();
+  // List<String> fileContent = File(args.first).readAsLinesSync();
 
-  fileContent.removeAt(0);
-  double sum = 0.0;
-  double aver = 0.0;
+  // fileContent.removeAt(0);
+  // double sum = 0.0;
+  // double aver = 0.0;
 
-  for (var item in fileContent) {
-    List items = item.split(',');
-    items.removeAt(0);
-    // print(items[2]);
+  // for (var item in fileContent) {
+  //   List items = item.split(',');
+  //   items.removeAt(0);
 
-    // print(items);
-    // sum += items[2];
-    sum += double.parse(items[0]);
-    aver += double.parse(items[1]);
-    aver = aver / 2;
-  }
-  print('Total Sports activities for 30 days was ${sum.toStringAsFixed(2)}');
-  print(
-      'Average daily  Sports activities for 30 days was ${aver.toStringAsFixed(2)}');
+  //   sum += double.parse(items[0]);
+  //   aver += double.parse(items[1]);
+  //   aver = aver / 2;
+  // }
+  // print('Total Sports activities for 30 days was ${sum.toStringAsFixed(2)}');
+  // print(
+  //     'Average daily  Sports activities for 30 days was ${aver.toStringAsFixed(2)}');
 
   //////By Ref By value////
   // List per1 = ['aamir'];
