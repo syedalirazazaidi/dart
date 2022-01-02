@@ -22,52 +22,67 @@
 import 'dart:io';
 
 void main(List<String> args) {
+  ///NULL SAFETY////
+  int salary = 1000;
+  int? bonus;
+  if (salary < 1500) {
+    bonus = 300;
+  }
+  bonus ??= 0;
+
+  print(salary + bonus);
+  // if (bonus != null) {
+  //   print(salary + bonus);
+  // } else {
+  //   print('salary');
+  // }
+
   ///Argument////
-  if (args.isEmpty) {
-    print(
-        ' Invalid Syntex :dart run <Project Name>[List of arguments] : $args');
-    exit(1);
-  } else if (!args.first.endsWith('.csv')) {
-    print('invalid File: File must be CSV format');
-    exit(1);
-  }
+  // if (args.isEmpty) {
+  //   print(
+  //       ' Invalid Syntex :dart run <Project Name>[List of arguments] : $args');
+  //   exit(1);
+  // } else if (!args.first.endsWith('.csv')) {
+  //   print('invalid File: File must be CSV format');
+  //   exit(1);
+  // }
 
-  String nameFile = args.first;
-  List<String> fileContent = File(nameFile).readAsLinesSync();
-  fileContent.removeAt(0);
-  double sportDurationTotal = 0;
-  int sportDays = 0;
-  int kcalIntakeTotal = 0;
-  int kcalDays = 0;
-  double sleepHoursTotal = 0;
-  int sleepDays = 0;
-  for (String line in fileContent) {
-    List<dynamic> lineValues = line.split(',');
-    double todaysSportHours = double.parse(lineValues[1]);
-    if (todaysSportHours != 0) {
-      sportDurationTotal += todaysSportHours;
-      sportDays++;
-    }
-    int todaysKcalIntake = int.parse(lineValues[2]);
-    if (todaysKcalIntake != 0) {
-      kcalIntakeTotal += todaysKcalIntake;
-      kcalDays++;
-    }
+  // String nameFile = args.first;
+  // List<String> fileContent = File(nameFile).readAsLinesSync();
+  // fileContent.removeAt(0);
+  // double sportDurationTotal = 0;
+  // int sportDays = 0;
+  // int kcalIntakeTotal = 0;
+  // int kcalDays = 0;
+  // double sleepHoursTotal = 0;
+  // int sleepDays = 0;
+  // for (String line in fileContent) {
+  //   List<dynamic> lineValues = line.split(',');
+  //   double todaysSportHours = double.parse(lineValues[1]);
+  //   if (todaysSportHours != 0) {
+  //     sportDurationTotal += todaysSportHours;
+  //     sportDays++;
+  //   }
+  //   int todaysKcalIntake = int.parse(lineValues[2]);
+  //   if (todaysKcalIntake != 0) {
+  //     kcalIntakeTotal += todaysKcalIntake;
+  //     kcalDays++;
+  //   }
 
-    double todaysSleepHours = double.parse(lineValues[3]);
-    if (todaysSleepHours != 0) {
-      sleepHoursTotal += todaysSleepHours;
-      sleepDays++;
-    }
-  }
-  print(
-      "Total sports activity for $sportDays days was ${sportDurationTotal.toStringAsFixed(2)}h");
+  //   double todaysSleepHours = double.parse(lineValues[3]);
+  //   if (todaysSleepHours != 0) {
+  //     sleepHoursTotal += todaysSleepHours;
+  //     sleepDays++;
+  //   }
+  // }
+  // print(
+  //     "Total sports activity for $sportDays days was ${sportDurationTotal.toStringAsFixed(2)}h");
 
-  print(
-      "Average daily KCal intake for $kcalDays days was ${(kcalIntakeTotal / kcalDays).toStringAsFixed(2)} KCals");
+  // print(
+  //     "Average daily KCal intake for $kcalDays days was ${(kcalIntakeTotal / kcalDays).toStringAsFixed(2)} KCals");
 
-  print(
-      "Average daily Sleep hours for $sleepDays days was ${(sleepHoursTotal / sleepDays).toStringAsFixed(2)}h");
+  // print(
+  //     "Average daily Sleep hours for $sleepDays days was ${(sleepHoursTotal / sleepDays).toStringAsFixed(2)}h");
 
   //  else if (args.isNotEmpty) {
   //   print('  : $args');
