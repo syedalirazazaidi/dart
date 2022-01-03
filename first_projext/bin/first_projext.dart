@@ -23,14 +23,36 @@ import 'dart:io';
 
 void main(List<String> args) {
   ///NULL SAFETY////
-  int salary = 1000;
-  int? bonus;
-  if (salary < 1500) {
-    bonus = 300;
+  List<String> dayNames = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday'
+  ];
+  List<double?> dailySportsHours = [
+    1,
+    1.5,
+    1.25,
+    null,
+    1.3,
+    2,
+    1.5,
+  ];
+  for (int i = 0; i < dailySportsHours.length; i++) {
+    print('${dayNames[i]}: ${dailySportsHours[i]?.round()}');
   }
-  bonus ??= 0;
 
-  print(salary + bonus);
+  // int salary = 1000;
+  // int? bonus;
+  // if (salary < 1500) {
+  //   bonus = 300;
+  // }
+  // bonus ??= 0;
+
+  // print(salary + bonus);
   // if (bonus != null) {
   //   print(salary + bonus);
   // } else {
