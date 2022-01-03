@@ -18,32 +18,70 @@
 // enum Fruits { mango, apple, banana, grapes }
 // import 'dart:io';
 
-// import 'dart:math';
+import 'dart:math';
 import 'dart:io';
 
-void main(List<String> args) {
-  ///NULL SAFETY////
-  List<String> dayNames = [
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-    'Sunday'
-  ];
-  List<double?> dailySportsHours = [
-    1,
-    1.5,
-    1.25,
-    null,
-    1.3,
-    2,
-    1.5,
-  ];
-  for (int i = 0; i < dailySportsHours.length; i++) {
-    print('${dayNames[i]}: ${dailySportsHours[i]?.round()}');
+void main() {
+  int yourNumber = Rollthedies('your');
+
+  int systemNumber = Rollthedies('system');
+  checkDies(yourNumber, systemNumber);
+}
+
+int Rollthedies(title) {
+  int numb = Random().nextInt(6) + 1;
+  print("$title number $numb");
+
+  return numb;
+}
+
+void checkDies(int yourNumber, int systemNumber) {
+  if (yourNumber == systemNumber) {
+    print("its a tie!");
+  } else if (yourNumber > systemNumber) {
+    print("You win!");
+  } else {
+    print("You lost!");
   }
+}
+
+// void yourNumber(yourNum) {
+//   print(yourNumber);
+// }
+
+// void systemNumber(systemNum) {
+//   print(systemNum);
+// }
+// void printName(String name, [int? age]) {
+//   age ??= 0;
+//   print('$name hi ali $age');
+// }
+
+// void main(List<String> args) {
+  // Functions in Dart///
+
+  ///NULL SAFETY////
+  // List<String> dayNames = [
+  //   'Monday',
+  //   'Tuesday',
+  //   'Wednesday',
+  //   'Thursday',
+  //   'Friday',
+  //   'Saturday',
+  //   'Sunday'
+  // ];
+  // List<double?> dailySportsHours = [
+  //   1,
+  //   1.5,
+  //   1.25,
+  //   null,
+  //   1.3,
+  //   2,
+  //   1.5,
+  // ];
+  // for (int i = 0; i < dailySportsHours.length; i++) {
+  //   print('${dayNames[i]}: ${dailySportsHours[i]?.round()}');
+  // }
 
   // int salary = 1000;
   // int? bonus;
@@ -440,4 +478,4 @@ void main(List<String> args) {
   // print(itemDouble);
   // String valu = itemDouble.toString();
   // print(valu);
-}
+// }

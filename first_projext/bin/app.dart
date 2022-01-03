@@ -1,5 +1,5 @@
 import 'dart:ffi';
 
-void text(List<String> args) {
+void main(List<String> args) {
   print('hi');
 }
