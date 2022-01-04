@@ -21,45 +21,61 @@
 // import 'dart:math';
 import 'dart:io';
 
+///FUNCTION Pass as a parameter//
+void main() {
+  final getMsg = (String name) => 'Hello $name';
+
+  final printMsg = (String Function(String) getMessage, String name) {
+    String msg = getMessage(name);
+    print(msg);
+  };
+
+  printMsg(getMsg, 'Aamir');
+  printMsg(getMsg, 'Pinger');
+}
+////LAXICAL SCOPE///
+
+
 // Map<String, Map<String, int>> studentIds = {
 //   "science": {"aamir": 40, "fazal": 70, "ali": 30},
 //   "math": {"aamir": 60, "fazal": 39, "ali": 30},
 //   "english": {"aamir": 50, "fazal": 70, "ali": 60},
 // };
-List<Map<String, Object>> stdrecords = [
-  {
-    "name": 'BBA Morning',
-    "studentAgeList": [20, 21, 22, 20, 23, 19]
-  },
-  {
-    "name": 'MBA Morning',
-    "studentAgeList": [23, 23, 24, 23, 22.5]
-  },
-  {"name": 'MBA Evening', "studentAgeList": []}
-];
-void getAllAverages(List<Map> studentRecords) {
-  studentRecords.forEach((element) {
-    print(
-        "The average age in program ${element['name']} is ${getAverage(element['studentAgeList'] ?? [])}");
-  });
-}
+///EXERCISE MAP///
+// List<Map<String, Object>> stdrecords = [
+//   {
+//     "name": 'BBA Morning',
+//     "studentAgeList": [20, 21, 22, 20, 23, 19]
+//   },
+//   {
+//     "name": 'MBA Morning',
+//     "studentAgeList": [23, 23, 24, 23, 22.5]
+//   },
+//   {"name": 'MBA Evening', "studentAgeList": []}
+// ];
+// void getAllAverages(List<Map> studentRecords) {
+//   studentRecords.forEach((element) {
+//     print(
+//         "The average age in program ${element['name']} is ${getAverage(element['studentAgeList'] ?? [])}");
+//   });
+// }
 
-double getAverage(List<dynamic> ageList) {
-  if (ageList.length == 0) {
-    return 0;
-  }
+// double getAverage(List<dynamic> ageList) {
+//   if (ageList.length == 0) {
+//     return 0;
+//   }
 
-  double totalAge = 0;
-  ageList.forEach((element) {
-    totalAge += element;
-  });
+//   double totalAge = 0;
+//   ageList.forEach((element) {
+//     totalAge += element;
+//   });
 
-  return double.parse((totalAge / ageList.length).toStringAsFixed(2));
-}
+//   return double.parse((totalAge / ageList.length).toStringAsFixed(2));
+// }
 
-void main() {
-  getAllAverages(stdrecords);
-}
+// void main() {
+//   getAllAverages(stdrecords);
+// }
 
 // void main() {
 //   printInfo(age: 40, name: "aamir");
