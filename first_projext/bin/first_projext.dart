@@ -21,13 +21,55 @@
 // import 'dart:math';
 import 'dart:io';
 
-void main() {
-  printInfo(age: 40, name: "aamir");
+// Map<String, Map<String, int>> studentIds = {
+//   "science": {"aamir": 40, "fazal": 70, "ali": 30},
+//   "math": {"aamir": 60, "fazal": 39, "ali": 30},
+//   "english": {"aamir": 50, "fazal": 70, "ali": 60},
+// };
+List<Map<String, Object>> stdrecords = [
+  {
+    "name": 'BBA Morning',
+    "studentAgeList": [20, 21, 22, 20, 23, 19]
+  },
+  {
+    "name": 'MBA Morning',
+    "studentAgeList": [23, 23, 24, 23, 22.5]
+  },
+  {"name": 'MBA Evening', "studentAgeList": []}
+];
+void getAllAverages(List<Map> studentRecords) {
+  studentRecords.forEach((element) {
+    print(
+        "The average age in program ${element['name']} is ${getAverage(element['studentAgeList'] ?? [])}");
+  });
 }
 
-void printInfo({required String name, required int age}) {
-  print("$name $age");
+double getAverage(List<dynamic> ageList) {
+  if (ageList.length == 0) {
+    return 0;
+  }
+
+  double totalAge = 0;
+  ageList.forEach((element) {
+    totalAge += element;
+  });
+
+  return double.parse((totalAge / ageList.length).toStringAsFixed(2));
 }
+
+void main() {
+  getAllAverages(stdrecords);
+}
+
+// void main() {
+//   printInfo(age: 40, name: "aamir");
+// }
+
+///required for manditory
+
+// void printInfo({required String name, required int age}) {
+//   print("$name $age");
+// }
 
 
 // ///Functions
