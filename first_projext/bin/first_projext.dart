@@ -18,32 +18,42 @@
 // enum Fruits { mango, apple, banana, grapes }
 // import 'dart:io';
 
-import 'dart:math';
+// import 'dart:math';
 import 'dart:io';
 
 void main() {
-  int yourNumber = Rollthedies('your');
-
-  int systemNumber = Rollthedies('system');
-  checkDies(yourNumber, systemNumber);
+  printInfo(age: 40, name: "aamir");
 }
 
-int Rollthedies(title) {
-  int numb = Random().nextInt(6) + 1;
-  print("$title number $numb");
-
-  return numb;
+void printInfo({required String name, required int age}) {
+  print("$name $age");
 }
 
-void checkDies(int yourNumber, int systemNumber) {
-  if (yourNumber == systemNumber) {
-    print("its a tie!");
-  } else if (yourNumber > systemNumber) {
-    print("You win!");
-  } else {
-    print("You lost!");
-  }
-}
+
+// ///Functions
+// void main() {
+//   int yourNumber = Rollthedies('your');
+
+//   int systemNumber = Rollthedies('system');
+//   checkDies(yourNumber, systemNumber);
+// }
+
+// int Rollthedies(title) {
+//   int numb = Random().nextInt(6) + 1;
+//   print("$title number $numb");
+
+//   return numb;
+// }
+
+// void checkDies(int yourNumber, int systemNumber) {
+//   if (yourNumber == systemNumber) {
+//     print("its a tie!");
+//   } else if (yourNumber > systemNumber) {
+//     print("You win!");
+//   } else {
+//     print("You lost!");
+//   }
+// }
 
 // void yourNumber(yourNum) {
 //   print(yourNumber);
