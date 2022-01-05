@@ -21,7 +21,58 @@
 // import 'dart:math';
 import 'dart:io';
 
-// GETTER and SETTER//
+// GETTER and SETTER EXERCISE//
+class BankAccount {
+  BankAccount({required this.title, this.balance = 0});
+  final String title;
+  int balance;
+  int dollarRate = 160;
+  bool deposit(int amount) {
+    balance += amount;
+    return true;
+  }
+
+  bool withdraw(int amount) {
+    if (balance > amount) {
+      balance -= amount;
+      return true;
+    }
+    return false;
+  }
+
+  void set dollardeposit(int dollarAmount) {
+    balance += dollarAmount * dollarRate;
+  }
+
+  void set dollarwithdraw(int dollarAmount) {
+    final pakRs = dollarRate * dollarAmount;
+    if (balance > pakRs) {
+      balance -= pakRs;
+    } else {
+      print('Inficient balane');
+    }
+  }
+
+  double get balanceInDollar => balance / dollarRate;
+}
+
+void main() {
+  BankAccount myAccount = BankAccount(
+    title: 'ali',
+  );
+  print('initial Balance ${myAccount.balance}');
+
+  print('initial title ${myAccount.title}');
+  myAccount.dollardeposit = 100;
+  myAccount.dollarwithdraw = 20;
+  print('final Balance ${myAccount.balance}');
+
+  print('final title ${myAccount.title}');
+}
+
+
+
+
 // class Person {
 // Person({this.firstName = '', this.LastName = ''});
 
@@ -104,7 +155,7 @@ import 'dart:io';
 // int ageGar = 4;
 // }
 
-void main() {
+// void main() {
   // Person me = Person(firstName: 'Aamir', LastName: 'Pinger');
 
   // print('${me.firstName} ${me.LastName}');
@@ -148,7 +199,7 @@ void main() {
 
   // printMsg(getMsg, 'Aamir');
   // printMsg(getMsg, 'Pinger');
-}
+// }
 ////LAXICAL SCOPE///
 
 // Map<String, Map<String, int>> studentIds = {
