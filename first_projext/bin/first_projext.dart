@@ -21,6 +21,25 @@
 // import 'dart:math';
 import 'dart:io';
 
+// GETTER and SETTER//
+// class Person {
+// Person({this.firstName = '', this.LastName = ''});
+
+// String firstName;
+// String LastName;
+// void setFullName(String fullName) {
+//   print(fullName);
+//   final trimName = fullName.trim();
+//   print(trimName);
+//   final splittedName = fullName.trim().split(' ');
+//   print(splittedName);
+//   this.firstName = splittedName.removeAt(0);
+//   print(firstName);
+//   this.LastName = splittedName.join(' ');
+//   print(LastName);
+// }
+// }
+
 ///CLASSES IS DART
 // classes exercies
 // class BankAccount {
@@ -86,6 +105,11 @@ import 'dart:io';
 // }
 
 void main() {
+  // Person me = Person(firstName: 'Aamir', LastName: 'Pinger');
+
+  // print('${me.firstName} ${me.LastName}');
+
+  // me.setFullName('Asif Ali');
   // final myAccount = BankAccount(title: "aali");
   // print('The title of my account is ${myAccount.getTitle()}');
   // print('The initial bank balance is ${myAccount.getBalance()}');
