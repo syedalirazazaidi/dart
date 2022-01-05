@@ -21,17 +21,56 @@
 // import 'dart:math';
 import 'dart:io';
 
-///FUNCTION Pass as a parameter//
+///CLASSES IS DART
+
+class Bio {
+  //classes Instance
+  String? name = 'raza';
+  int mileage = 4;
+  int getMileage() {
+    return mileage;
+  }
+
+  int increaseMileage(int distance) {
+    mileage += distance;
+    return mileage;
+  }
+
+  // String? color;
+  // int wheels = 4;
+  // int getMileage() {
+  //   int mileage = 0;
+  //   mileage++;
+  //   return mileage;
+  // }
+}
+
 void main() {
-  final getMsg = (String name) => 'Hello $name';
+  Bio BioGra = Bio();
+  BioGra.name = 'ali';
+  Bio BioYour = Bio();
+  print(BioYour.name);
+  print(BioGra.name);
+  print(BioYour.increaseMileage(4));
 
-  final printMsg = (String Function(String) getMessage, String name) {
-    String msg = getMessage(name);
-    print(msg);
-  };
+  print(BioYour.increaseMileage(3));
 
-  printMsg(getMsg, 'Aamir');
-  printMsg(getMsg, 'Pinger');
+  // Car myCar = Car();
+  // print(myCar.wheels);
+  // myCar.color = 'red';
+  // print(myCar.color);
+  // print(myCar.getMileage());
+
+  ///FUNCTION Pass as a parameter//
+  // final getMsg = (String name) => 'Hello $name';
+
+  // final printMsg = (String Function(String) getMessage, String name) {
+  //   String msg = getMessage(name);
+  //   print(msg);
+  // };
+
+  // printMsg(getMsg, 'Aamir');
+  // printMsg(getMsg, 'Pinger');
 }
 ////LAXICAL SCOPE///
 
