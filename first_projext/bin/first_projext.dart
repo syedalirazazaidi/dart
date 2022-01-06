@@ -67,6 +67,8 @@ void main() {
   myAccount.dollarwithdraw = 20;
   print('final Balance ${myAccount.balance}');
 
+  print('final Balance ${myAccount.balanceInDollar}');
+
   print('final title ${myAccount.title}');
 }
 
