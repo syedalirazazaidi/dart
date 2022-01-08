@@ -22,55 +22,88 @@
 import 'dart:io';
 
 // GETTER and SETTER EXERCISE//
-class BankAccount {
-  BankAccount({required this.title, this.balance = 0});
-  final String title;
-  int balance;
-  int dollarRate = 160;
-  bool deposit(int amount) {
-    balance += amount;
-    return true;
-  }
+// [
+//     {
+//       id: '1',
+//       title: "Rich Dad Poor Dad",
+//       author: 'Robert T. Kiyosaki',
+//       price: 35.0,
+// 	},
+// {
+//       id: '2',
+//       title: "A short history of the world",
+//       author: 'Christopher Lascelles',
+//       price: 30.0,
+// 	},
+//     {
+//       id: '3',
+//       title: "How to win friends and influence people",
+//       author: 'Dale Carnegie',
+//       price: 25.0,
+// 	},
+//    {
+//       id: '4',
+//       title: "Ikigai",
+//       author: 'Francesc Miralles and Hector Garcia',
+//       price: 37.0,
+// 	},
+// {
+//       id: '5',
+//       title: "The essential Rumi",
+//       author: 'Coleman Barks',
+//       price: 50.0,
+//     },
+//   ];
 
-  bool withdraw(int amount) {
-    if (balance > amount) {
-      balance -= amount;
-      return true;
-    }
-    return false;
-  }
+// class BankAccount {
+//   BankAccount({required this.title, this.balance = 0});
+//   final String title;
+//   int balance;
+//   int dollarRate = 160;
+//   bool deposit(int amount) {
+//     balance += amount;
+//     return true;
+//   }
 
-  void set dollardeposit(int dollarAmount) {
-    balance += dollarAmount * dollarRate;
-  }
+//   bool withdraw(int amount) {
+//     if (balance > amount) {
+//       balance -= amount;
+//       return true;
+//     }
+//     return false;
+//   }
 
-  void set dollarwithdraw(int dollarAmount) {
-    final pakRs = dollarRate * dollarAmount;
-    if (balance > pakRs) {
-      balance -= pakRs;
-    } else {
-      print('Inficient balane');
-    }
-  }
+//   void set dollardeposit(int dollarAmount) {
+//     balance += dollarAmount * dollarRate;
+//   }
 
-  double get balanceInDollar => balance / dollarRate;
-}
+//   void set dollarwithdraw(int dollarAmount) {
+//     final pakRs = dollarRate * dollarAmount;
+//     if (balance > pakRs) {
+//       balance -= pakRs;
+//     } else {
+//       print('Inficient balane');
+//     }
+//   }
 
-void main() {
-  BankAccount myAccount = BankAccount(
-    title: 'ali',
-  );
-  print('initial Balance ${myAccount.balance}');
+//   double get balanceInDollar => balance / dollarRate;
+// }
 
-  print('initial title ${myAccount.title}');
-  myAccount.dollardeposit = 100;
-  myAccount.dollarwithdraw = 20;
-  print('final Balance ${myAccount.balance}');
+// void main() {
+//   BankAccount myAccount = BankAccount(
+//     title: 'ali',
+//   );
+//   print('initial Balance ${myAccount.balance}');
 
-  print('final Balance ${myAccount.balanceInDollar}');
+//   print('initial title ${myAccount.title}');
+//   myAccount.dollardeposit = 100;
+//   myAccount.dollarwithdraw = 20;
+//   print('final Balance ${myAccount.balance}');
 
-  print('final title ${myAccount.title}');
-}
+//   print('final Balance ${myAccount.balanceInDollar}');
+
+//   print('final title ${myAccount.title}');
+// }
 
 
 
